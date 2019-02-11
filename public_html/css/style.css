@@ -1,0 +1,41 @@
+#signUpForm{
+   width: 50%;
+   margin:auto;
+}
+
+body{
+    background-color:cadetblue;
+}
+
+.menuOption{
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    
+}
+
+.header{
+    height: 50px;
+    background-color: steelblue;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.leftSection{
+    float: left;
+
+    background-color: steelblue;
+    height: 500px;
+    width: 200px;
+}
+
+.middleSection{
+    float: left;
+    margin-left: 100px;
+}

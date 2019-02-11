@@ -1,0 +1,32 @@
+
+# HTID:7585658: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:7585658:
+
+RewriteEngine On
+
+
+
+#ignore the views and .php
+RewriteRule ^([a-z0-9-]*)/$ ./views/$1.php [NC,L]
+
+#catch 404 errors
+ErrorDocument 404 /views/404.php
+
+#apanhar id da imagem
+RewriteRule ^g/([a-z0-9-]*)/$ ./views/g.php?image=$1 [L]
+
+#apanhar id do artista
+RewriteRule ^artist/([a-z0-9-]*)/$ ./views/artist.php?artist=$1 [L]
+
+#apanhar galeria do artista
+RewriteRule ^artist/([a-z0-9-]*)/gallery/$ ./views/artistGallery.php?artist=$1 [L]
+
+#apanhar tag slug
+RewriteRule ^tag/([a-z0-9-]*)/$ ./views/tag.php?tagSlug=$1 [L]
+
+#apanhar source slug
+RewriteRule ^source/([a-z0-9-]*)/$ ./views/source.php?sourceSlug=$1 [L]
+
+#apanhar character slug
+RewriteRule ^character/([a-z0-9-]*)/$ ./views/character.php?characterSlug=$1 [L]
